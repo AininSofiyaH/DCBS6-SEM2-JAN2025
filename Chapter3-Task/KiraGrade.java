@@ -2,10 +2,10 @@ import java.util.Scanner;
 
 public class KiraGrade {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        Scanner read = new Scanner(System.in);
         
         System.out.print("Masukkan nilai akhir: ");
-        int mark = scanner.nextInt();
+        int mark = read.nextInt();
         String grade;
 
         if (mark >= 90) {
@@ -31,6 +31,6 @@ public class KiraGrade {
         }
 
         System.out.println("Grade: " + grade);
-        scanner.close();
+        read.close();
     }
 }
