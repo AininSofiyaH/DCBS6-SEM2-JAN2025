@@ -49,9 +49,10 @@ class PurchasingSystem {
 				colorCode = "No Discount";
 				break;
 			default:
-				System.out.println("Invalid choice . No discount applied.");
+				System.out.println("Invalid choice . No discount applied."); //Kalau user salah input
 		}
 
+		//Calculation
 		double discountAmount = totalPrice * discountRate;
 		double priceAfterDiscount = totalPrice - discountAmount;
                 
