@@ -1,4 +1,4 @@
-public class Chapter3_Task3_Multazam {
+public class Chapter4_Task3_Multazam {
     public static void main(String[] args) {
         int Even = 0;
         int Odd = 0;
