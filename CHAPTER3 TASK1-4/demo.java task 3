@@ -1,0 +1,66 @@
+import java.util.Scanner;
+
+public class Demo {
+    public static void main(String[] args) {
+       
+        Scanner reader = new Scanner(System.in);
+        
+       
+        System.out.print("Masukkan nama item tersebut: ");
+        String itemName = reader.nextLine();
+        
+        System.out.print("Masukkan harga setiap barang: RM");
+        double pricePerItem = reader.nextDouble();
+        
+        System.out.print("Masukkan kuantiti: ");
+        int quantity = reader.nextInt();
+        
+        System.out.println("\nPilih kadar diskaun daripada kod warna berikut:");
+        System.out.println("1. Hijau - 55%");
+        System.out.println("2. Kuning - 75%");
+        System.out.println("3. Kelabu - 95%");
+        System.out.print("Masukkan nombor yang sepadan dengan kod warna anda: ");
+        
+        int colorChoice = reader.nextInt();
+        
+       
+        double discountRate = 0;
+        
+       
+        switch (colorChoice) {
+            case 1:
+                discountRate = 0.55; 
+                break;
+            case 2:
+                discountRate = 0.75; 
+                break;
+            case 3:
+                discountRate = 0.95; 
+                break;
+            default:
+                System.out.println("Pilihan tidak sah, tiada diskaun yang diberikan.");
+                return; 
+        }
+        
+      
+        double totalPrice = pricePerItem * quantity;
+        
+        
+        double discountAmount = totalPrice * discountRate;
+        
+        
+        double priceAfterDiscount = totalPrice - discountAmount;
+        
+        
+        System.out.println("\n--- Invoice ---");
+        System.out.println("Item: " + itemName);
+        System.out.println("Price per Item: RM" + pricePerItem);
+        System.out.println("Quantity: " + quantity);
+        System.out.println("Total Price: RM" + totalPrice);
+        System.out.println("Discount Rate: " + (discountRate * 100) + "%");
+        System.out.println("Price After Discount: RM" + priceAfterDiscount);
+        
+        
+        reader.close();
+    }
+}

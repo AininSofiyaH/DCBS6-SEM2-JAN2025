@@ -1,0 +1,112 @@
+public class Demo {
+    public static void main(String[] args) {
+        String itemname = "";
+        double priceperitem = 0, discountrate = 0, totalprice, discountamount, priceafterdiscount, payment, balance;
+        int discountcode, quantity, itemchoice;
+
+        Scanner read = new Scanner(System.in);
+
+        System.out.println("=============================================== ");
+        System.out.println("        🛒 WELCOME TO THE FRESH MART 🏪         ");
+        System.out.println("=============================================== ");
+
+        // Display new items for the user to choose from
+        System.out.println("\nOur Items:");
+        System.out.println("1. ORGANIC AVOCADOS (1kg) : RM 50");
+        System.out.println("2. FRESH MANGOES (2kg)    : RM 35");
+        System.out.println("3. PREMIUM STRAWBERRIES (500g): RM 20");
+        System.out.println("4. NATURAL HONEY (1L)    : RM 70");
+        System.out.print("Select an item (1-4): ");
+        
+        // User selects item choice
+        itemchoice = read.nextInt();
+        
+        // Validate item choice
+        while (itemchoice < 1 || itemchoice > 4) {
+            System.out.println("Invalid choice, please select a valid item number (1-4): ");
+            itemchoice = read.nextInt();
+        }
+        
+        // Assign item name and price based on choice
+        switch (itemchoice) {
+            case 1:
+                itemname = "ORGANIC AVOCADOS (1kg)";
+                priceperitem = 50;
+                break;
+            case 2:
+                itemname = "FRESH MANGOES (2kg)";
+                priceperitem = 35;
+                break;
+            case 3:
+                itemname = "PREMIUM STRAWBERRIES (500g)";
+                priceperitem = 20;
+                break;
+            case 4:
+                itemname = "NATURAL HONEY (1L)";
+                priceperitem = 70;
+                break;
+        }
+        
+       
+        System.out.print("Enter the quantity of " + itemname + ": ");
+        quantity = read.nextInt();
+
+        // Calculate total price
+        totalprice = priceperitem * quantity;
+        System.out.println("Total Price: RM " + totalprice);
+
+        // Display discount options
+        System.out.println("\nDiscount Options:");
+        System.out.println("1. Blue (10%)");
+        System.out.println("2. Red (15%)");
+        System.out.println("3. Pink (25%)");
+        System.out.print("Select a discount color (1-3): ");
+        discountcode = read.nextInt();
+
+        // Validate discount choice
+        while (discountcode < 1 || discountcode > 3) {
+            System.out.println("Invalid choice, please select a valid discount code (1-3): ");
+            discountcode = read.nextInt();
+        }
+
+        // Assign discount rate based on choice
+        switch (discountcode) {
+            case 1: discountrate = 0.1; break;
+            case 2: discountrate = 0.15; break;
+            case 3: discountrate = 0.25; break;
+        }
+
+        // Calculate discount and final price
+        discountamount = totalprice * discountrate;
+        priceafterdiscount = totalprice - discountamount;
+        System.out.println("Price after discount: RM " + priceafterdiscount);
+
+        // Ask user for payment amount
+        System.out.print("\nEnter your payment amount: RM ");
+        payment = read.nextDouble();
+
+        // Process payment
+        if (payment >= priceafterdiscount) {
+            balance = payment - priceafterdiscount;
+            System.out.println("\nPurchase Successful!");
+            System.out.println("Change: RM " + balance);
+        } else {
+            double shortage = priceafterdiscount - payment;
+            System.out.println("\nInsufficient Payment!");
+            System.out.println("You need RM " + shortage + " more to complete the purchase.");
+        }
+
+        // Display receipt
+        System.out.println("\n=================================================");
+        System.out.println("                  Purchase Receipt                ");
+        System.out.println("=================================================");
+        System.out.println("Item: " + itemname);
+        System.out.println("Price per Item: RM " + priceperitem);
+        System.out.println("Quantity: " + quantity);
+        System.out.println("Total Price: RM " + totalprice);
+        System.out.println("Discount Applied: " + (discountrate * 100) + "%");
+        System.out.println("Price after Discount: RM " + priceafterdiscount);
+
+        read.close();
+    }
+}
