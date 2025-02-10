@@ -1,4 +1,4 @@
-public class task1 {
+public class CHAPTER4-TASK1-AMIR ARSHAD {
     public static void main(String[] args) {
         
         System.out.println(" for :");
