@@ -15,7 +15,7 @@ public class Task4loop_chap4 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        int odd = 0,even = 0,hantei = 0,sequi,keta,digit = 0;
+        int odd = 0,even = 0,hantei = 0,keta,digit = 0;
         String answer,cont;
         Scanner kanri = new Scanner(System.in);
         do {
@@ -23,10 +23,9 @@ public class Task4loop_chap4 {
             even = 0;
             hantei = 0 ;//初期化
             System.out.println("Please Enter integer:"); 
-            sequi = kanri.nextInt();
-            keta = sequi;//代入
+            keta = kanri.nextInt();
              while (keta != 0) {
-             digit = sequi % 10;
+             digit = keta % 10;
             hantei = digit % 2;
             if(hantei == 0){
                 even++;
