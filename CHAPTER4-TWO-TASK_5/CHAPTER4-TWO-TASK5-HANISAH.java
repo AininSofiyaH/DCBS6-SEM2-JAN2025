@@ -8,10 +8,10 @@ public class Ch4twobtask5 {
         do{
             System.out.println("Hello!Welcome to the Mulit-Program System.");
         System.out.println("1.Password");
-        System.out.println("2.salescomission");
-        System.out.println("3.evenodd numbers");
+        System.out.println("2.Sales Comission");
+        System.out.println("3.Even Odd Numbers");
         System.out.println("4.Exit");
-        System.out.println("Select a program to run and enjoy:");
+        System.out.println("Select a program to run and enjoy!: ");
         option = mix.nextInt();
         
         switch (option){
