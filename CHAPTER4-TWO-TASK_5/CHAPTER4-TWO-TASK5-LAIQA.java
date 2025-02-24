@@ -7,7 +7,8 @@ public class Main {
            Scanner userinp = new Scanner(System.in);
         int choice;
         System.out.println("   @@@ Wilkommen! @@@");
-        
+
+        //display the menu
         do { 
             System.out.println("Choose a program to run:");
             System.out.println("1. Password System");
@@ -16,10 +17,10 @@ public class Main {
             System.out.println("4. Exit");
             System.out.println("Enter your choice: ");
             choice = userinp.nextInt();
-            userinp.nextLine();
+            userinp.nextLine(); //clear yang int tu so nnti boleh baca string balik
             
         switch (choice) {
-            case 1:
+            case 1: // if user pick 1, password system will run
                 int option;
                 String password;
                     do {
@@ -31,14 +32,14 @@ public class Main {
                         } else {
                             System.out.println("Incorrect password.");
                         }
-                        System.out.print("Enter 1 to try again, 0 to exit: \n");
-                        option = userinp.nextInt();
+                        System.out.print("Enter 1 to try again, 0 to exit: \n"); 
+                        option = userinp.nextInt(); //let user choose to continue or exit using int
                         userinp.nextLine();
-                    } while (option == 1);
+                    } while (option == 1); //if user input one, this system will run again
                     break;
                
                     
-            case 2:
+            case 2: //if user pick 2
                int result, numstu, pass, fail;
                String choicetest;
                  do {
@@ -47,25 +48,25 @@ public class Main {
                      System.out.print("Enter the number of students: ");
                         numstu = userinp.nextInt();
     
-                for (int a = 0; a < numstu; a++){
+                for (int a = 0; a < numstu; a++){ 
                     System.out.print("Enter result for student " + (a + 1) + " (passing marks = 50) : ");
                     result = userinp.nextInt();
         
-                if (result > 50) {
+                if (result > 50) { //kalau result lebih 50, pass akan menaik
                      pass++;}
                  else {fail++; }}
                 
-                 if (pass > numstu / 2) {
-                    System.out.println("##Bonus to instructor##");}
+                 if (pass > numstu / 2) { //to determine if the student passes is above 50%
+                    System.out.println("##Bonus to instructor##");} //print kalau yng pass lebih 50%
                  else { System.out.println("No bonus to instructor");}
     
                     System.out.println("Number of students passed: " + pass);
                     System.out.println("Number of students failed: " + fail);
     
-              System.out.println("Do you want to continue? (yes/no): ");
+              System.out.println("Do you want to continue? (yes/no): "); 
               userinp.nextLine();
-                        choicetest = userinp.nextLine();
-                        } while (choicetest.equals("yes") || choicetest.equals("Yes"));
+                        choicetest = userinp.nextLine(); //let user choose to continue or exit using string
+                        } while (choicetest.equals("yes") || choicetest.equals("Yes")); 
                         break;
                     
             case 3: 
@@ -87,19 +88,19 @@ public class Main {
                 System.out.println("Number of odd integers: " + odd);
         
                 System.out.print("Do you want to continue? (y for yes/n for no) \n");
-                choicechar = userinp.next().charAt(0); // Read first character
-                    } while (choicechar == 'y' || choicechar == 'Y');
+                choicechar = userinp.next().charAt(0); //let user choose to continue or exit using char
+                    } while (choicechar == 'y' || choicechar == 'Y'); //read both small and capital y
                             break;
             
         
             case 4 : 
-                System.out.println("Thank you for using this system! Goodbye! <3\n");
+                System.out.println("Thank you for using this system! Goodbye! <3\n"); //output if user input 4
                 break;
             
             default:
-                System.out.println("###Invalid choice. Please try again!###\n");
+                System.out.println("###Invalid choice. Please try again!###\n"); //if user input anything other than 1,2,3, or 4
                    } 
-        } while (choice != 4); 
+        } while (choice != 4); //selagi user tak input 4, programme ni akan run
     }
     
 }
