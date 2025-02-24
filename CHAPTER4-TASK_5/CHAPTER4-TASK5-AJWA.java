@@ -14,12 +14,13 @@ public class Chapter4Task5 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+         // Displaying a message before printing the sequence
        System.out.println("Displaying the sequence: 99 88 77 66 55 44 33 22 11\n");
-        
+      // Loop to generate and print the sequence  
         for (int i = 99; i >= 11; i -= 11) {
-            System.out.print(i + " ");
+            System.out.print(i + " "); // Print the current value of i
         }
-        
+       // Move to the next line 
         System.out.println();
     }
 }
