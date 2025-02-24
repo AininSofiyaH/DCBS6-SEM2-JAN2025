@@ -16,14 +16,16 @@ public class CHAPTER4TASK2b3 {
      */
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-
+// Define the base salary for the salesman 
         double baseSalary = 600.0;
+// Set the commission rate 
         double commissionRate = 0.05; 
-        
+// Ask user to enter the total sales amount for the week         
         System.out.print("Enter the total sales for the week (RM): ");
         double totalSales = scanner.nextDouble();
-        
+// Calculate the commission earned 
         double commission = totalSales * commissionRate;
+// Calculate the total earnngs 
         double totalEarnings = baseSalary + commission + totalSales;
 
         System.out.println("Salesman Weekly Earnings ");
@@ -31,6 +33,7 @@ public class CHAPTER4TASK2b3 {
         System.out.println("Commission (5% of RM" + totalSales + "): RM" + commission);
         System.out.println("Total Earnings: RM" + totalEarnings);
 
+// Close the scanner 
         scanner.close();
     }
 }
