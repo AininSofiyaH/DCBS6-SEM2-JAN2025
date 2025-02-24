@@ -7,7 +7,7 @@ public class Salescomission {
         float comission,earnings,sales,salary=600;
         
         System.out.print("Please enter the number of sold items: ");
-        itemsold=read.nextInt();
+        itemsold=read.nextInt();//read the number of items sold for the week
         
         System.out.print("Please enter the gross sales amount for the week: RM");
         sales=read.nextFloat();
