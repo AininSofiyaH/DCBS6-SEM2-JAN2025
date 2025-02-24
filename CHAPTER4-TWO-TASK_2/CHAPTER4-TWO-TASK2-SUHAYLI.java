@@ -14,21 +14,21 @@ public class Chapter4Task2 {
          
         int sumfor = 0;
         for (int f = 1; f <= 10; f++) {
-            sumfor += f;
+            sumfor += f; //adding each number to sumfor
         }
         System.out.println("For Loop: " + sumfor);
 
         int sum = 0, w = 1;
         while (w <= 10) {
             sum += w;
-            w++;
+            w++; //incrementing
         }
         System.out.println("While Loop: " + sum);
 
         int sumdo = 0, d = 1;
         do {
-            sumdo += d;
-            d++;
+            sumdo += d; //adding each number to sumdo
+            d++; //incrementing
         } while (d <= 10);
         System.out.println("Do-while Loop: " + sumdo);
     }
