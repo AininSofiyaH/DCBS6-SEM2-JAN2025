@@ -20,9 +20,8 @@ public class SaleLetter {
         System.out.print("Enter the total sales for the week: RM");
         double grossSales = read.nextDouble();
 
-        double commission = grossSales * COMMISSION_RATE; // calculating commission
-
-        double totalEarnings = BASE_SALARY + commission; // calculate total earning
+        double commission = grossSales * COMMISSION_RATE; 
+        double totalEarnings = BASE_SALARY + commission; 
 
         System.out.println("Weekly earnings breakdown:");
         System.out.println("Base salary: RM" + BASE_SALARY);
