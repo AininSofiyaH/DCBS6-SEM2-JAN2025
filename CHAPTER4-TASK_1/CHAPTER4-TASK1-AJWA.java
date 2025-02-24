@@ -14,12 +14,13 @@ public class Chapter4Task1 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        // Using a for loop to print numbers from 1 to 10
         System.out.println("for loop:");
         for (int i = 1; i <= 10; i++) {
             System.out.print(i + " ");
         }
         System.out.println();
-
+        // Using a while loop to print numbers from 1 to 10
         System.out.println("while loop:");
         int count = 1;
         while (count <= 10) {
@@ -27,7 +28,7 @@ public class Chapter4Task1 {
             count++;
         }
         System.out.println();
-
+        // Using a do-while loop to print numbers from 1 to 10
         System.out.println("do-while loop:");
         int doWhile = 1;
         do {
