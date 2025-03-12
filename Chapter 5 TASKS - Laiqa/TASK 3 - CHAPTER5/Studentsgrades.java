@@ -6,7 +6,7 @@ public class Studentsgrades {
         Scanner userinp = new Scanner(System.in);
         int mark, gradeA = 0, gradeB = 0, gradeC = 0, gradeD = 0, gradeE = 0; 
         
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < 10; i++) { //loop for 10 students
             System.out.print("Enter mark " + (i + 1) + ": ");
             mark = userinp.nextInt();
             
